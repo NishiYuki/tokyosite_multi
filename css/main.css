@@ -8,12 +8,12 @@ body {
 }
 
 h1 {
-    position: relative;
-    padding: 0.6em;
-    background: #e0edff;
-    margin-bottom: 40px;
+  color: #010079;
+  text-shadow: 0 0 5px white;
+  border-left: solid 7px #010079;
+  background: -webkit-repeating-linear-gradient(-45deg, #cce7ff, #cce7ff 3px,#e9f4ff 3px, #e9f4ff 7px);
+  background: repeating-linear-gradient(-45deg, #cce7ff, #cce7ff 3px,#e9f4ff 3px, #e9f4ff 7px);
 }
-
 h1:after {
     position: absolute;
     content: '';
@@ -26,14 +26,11 @@ h1:after {
 }
 
 h2 {
-    margin-top: 40px;
-    padding: 0.4em 0.5em; /*文字の上下 左右の余白*/
-    color: #494949; /*文字色*/
-    background: #f4f4f4; /*背景色*/
-    border-left: solid 5px #7db4e6; /*左線*/
-    border-bottom: solid 3px #d7d7d7; /*下線*/
+  color: #364e96;/*文字色*/
+  padding: 0.5em 0;/*上下の余白*/
+  border-top: solid 3px #364e96;/*上線*/
+  border-bottom: solid 3px #364e96;/*下線*/
 }
-
 section > p {
     padding: 10px;
 }
@@ -55,15 +52,32 @@ dl dd {
 
 
 ul, ol {
-    background: #fffde8;
-    box-shadow: 0px 0px 0px 10px #fffde8; /*線の外側*/
-    border: dashed 2px #ffb03f; /*破線*/
-    border-radius: 9px;
-    margin-left: 10px; /*はみ出ないように調整*/
-    margin-right: 10px; /*はみ出ないように調整*/
-    padding: 0.5em 0.5em 0.5em 2em;
+  padding: 0;
 }
 
+ul li {
+  position: relative;
+  list-style-type: none!important;/*ポチ消す*/
+  padding: 0.5em 0.5em 0.5em 0.5em;
+  margin-bottom: 5px;
+  line-height: 1.5;
+  background: #dbebf8;
+  vertical-align: middle;
+  color: #505050;
+  border-radius: 15px 0px 0px 15px;/*左側の角丸く*/
+}
+
+ul li:before{ 
+  display:inline-block; 
+  vertical-align: middle;
+  /*以下白丸つくる*/
+  content:'';
+  width:1em;
+  height: 1em;
+  background: #fff;
+  border-radius: 50%;
+  margin-right: 8px;
+}
 ul li, ol li {
     line-height: 1.5;
     padding: 0.5em 0;
